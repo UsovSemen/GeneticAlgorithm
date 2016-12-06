@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="ishTable" layoutX="15.0" layoutY="80.0" prefHeight="296.0" prefWidth="614.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="671.0" AnchorPane.topAnchor="80.0">
+        <columns>
+          <TableColumn fx:id="ishPos" text="Позиция" />
+          <TableColumn fx:id="ishBin" prefWidth="111.0" text="Бинарный вид" />
+            <TableColumn fx:id="ishVal" prefWidth="116.0" text="Значение" />
+            <TableColumn fx:id="ishFunc" minWidth="9.0" prefWidth="136.0" text="Значение функции" />
+            <TableColumn fx:id="ishProb" minWidth="9.0" prefWidth="170.0" text="Вероятность" />
+        </columns>
+      </TableView>
+      <TableView fx:id="repTable" layoutX="710.0" layoutY="80.0" prefHeight="296.0" prefWidth="580.0" AnchorPane.leftAnchor="710.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
+        <columns>
+          <TableColumn fx:id="repBin" minWidth="0.0" prefWidth="184.0" text="Бинарный вид" />
+            <TableColumn fx:id="repVal" minWidth="0.0" prefWidth="149.0" text="Значение" />
+            <TableColumn fx:id="repFunc" minWidth="0.0" prefWidth="187.0" text="Значение функции" />
+        </columns>
+      </TableView>
+      <TableView fx:id="operationTable" layoutX="14.0" layoutY="400.0" prefHeight="265.0" prefWidth="614.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="671.0">
+        <columns>
+          <TableColumn fx:id="befCross" prefWidth="110.0" text="До кроссинговера" />
+          <TableColumn fx:id="afterCross" prefWidth="109.0" text="После кроссинговера" />
+            <TableColumn fx:id="afterVal" prefWidth="109.0" text="Значение функции" />
+            <TableColumn fx:id="mut" prefWidth="109.0" text="Мутация" />
+            <TableColumn fx:id="mutVal" prefWidth="109.0" text="Значение функции" />
+        </columns>
+      </TableView>
+      <TableView fx:id="allTable" layoutX="715.0" layoutY="400.0" prefHeight="265.0" prefWidth="580.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="710.0" AnchorPane.rightAnchor="10.0">
+         <columns>
+            <TableColumn fx:id="allPos" text="Позиция" />
+            <TableColumn fx:id="allBin" prefWidth="111.0" text="Бинарный вид" />
+            <TableColumn fx:id="allVal" prefWidth="116.0" text="Значение" />
+            <TableColumn fx:id="allFunc" minWidth="9.0" prefWidth="136.0" text="Значение функции" />
+         </columns>
+      </TableView>
+      <TextField fx:id="Power" layoutX="14.0" layoutY="27.0" />
+      <TextField fx:id="Steps" layoutX="185.0" layoutY="27.0" />
+      <Button fx:id="Start" layoutX="700.0" layoutY="15.0" mnemonicParsing="false" text="Начать" />
+      <Label layoutX="15.0" layoutY="6.0" text="Мощность популяции" />
+      <Label layoutX="185.0" layoutY="6.0" text="Количество итераций" />
+      <Label layoutX="352.0" layoutY="6.0" text="Вероятность кроссинговера" />
+      <Label layoutX="529.0" layoutY="6.0" text="Вероятность мутации" />
+      <TextField fx:id="PC" layoutX="352.0" layoutY="27.0" />
+      <TextField fx:id="PM" layoutX="529.0" layoutY="27.0" />
+      <ComboBox fx:id="comboBox" layoutX="1136.0" layoutY="15.0" prefWidth="150.0" />
+      <Label layoutX="15.0" layoutY="55.0" text="Исходная на итерации:" />
+      <Label layoutX="15.0" layoutY="380.0" text="После операций:" AnchorPane.bottomAnchor="283.0" />
+      <Label layoutX="710.0" layoutY="380.0" text="После усечения:" AnchorPane.bottomAnchor="283.0" />
+      <Label layoutX="710.0" layoutY="55.0" text="После репродукции:" />
+      <Label fx:id="maxVal" layoutX="773.0" layoutY="15.0" text="Максимальное значение - " />
+   </children>
+</AnchorPane>
